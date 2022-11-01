@@ -1,0 +1,20 @@
+Variant: debug
+Config: debug
+Store: C:\Users\congl\.android\debug.keystore
+Alias: AndroidDebugKey
+MD5: 78:DA:8D:47:89:36:96:2B:D5:B3:EE:0C:5C:4F:9D:7D
+SHA1: 88:B2:90:C6:C9:00:AF:99:90:98:8B:93:F6:D2:7A:EE:DA:91:32:20
+SHA-256: BC:ED:6F:11:9C:B8:F0:99:47:4D:1E:81:46:BF:B4:D3:B8:88:12:69:D3:93:80:A4:60:3C:19:DC:EE:9D:D9:D0
+Valid until: Tuesday, October 10, 2051
+----------
+Variant: release
+Config: none
+----------
+Variant: debugAndroidTest
+Config: debug
+Store: C:\Users\congl\.android\debug.keystore
+Alias: AndroidDebugKey
+MD5: 78:DA:8D:47:89:36:96:2B:D5:B3:EE:0C:5C:4F:9D:7D
+SHA1: 88:B2:90:C6:C9:00:AF:99:90:98:8B:93:F6:D2:7A:EE:DA:91:32:20
+SHA-256: BC:ED:6F:11:9C:B8:F0:99:47:4D:1E:81:46:BF:B4:D3:B8:88:12:69:D3:93:80:A4:60:3C:19:DC:EE:9D:D9:D0
+Valid until: Tuesday, October 10, 2051

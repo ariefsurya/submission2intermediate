@@ -1,0 +1,38 @@
+<resources>
+    <string name="app_name">Submission Intermediate 1</string>
+    <string name="register_desc">Create Your Story Account</string>
+    <string name="register_here"><u>Register Here !</u></string>
+    <string name="sign_in">Sign In</string>
+    <string name="sign_up">Sign Up</string>
+    <string name="email">Email</string>
+    <string name="password">Password</string>
+    <string name="user_name">User Name</string>
+    <string name="description">Description</string>
+    <string name="story">Story</string>
+    <string name="map_story">Map Story</string>
+    <string name="story_detail">Story Detail</string>
+    <string name="add_new_story">Add new Story</string>
+    <string name="setting">Setting</string>
+    <string name="logout">Logout</string>
+    <string name="camera">Camera</string>
+    <string name="gallery">Gallery</string>
+    <string name="upload">Upload</string>
+    <string name="light_mode">Light Mode</string>
+    <string name="dark_mode">Dark Mode</string>
+    <string name="language_setting">Language Setting</string>
+    <string name="empty_text">NO DATA</string>
+    <string name="retry">retry</string>
+    <string name="timeout">Timeout</string>
+
+    <string name="register_success">Register Successful</string>
+    <string name="story_not_found">Story Not Found</string>
+    <!-- string error -->
+    <string name="error_name_not_valid">Please Fill Your Name</string>
+    <string name="error_email_not_valid">Email not valid</string>
+    <string name="error_password_min_length">Password Length Minimum 6 Character</string>
+    <string name="error_descriptiom_not_valid">Please Fill Description</string>
+    <string name="error_photo_not_valid">Please Upload Story\'s Photo</string>
+    <string name="appwidget_text">Story</string>
+    <string name="add_widget">Add widget</string>
+    <string name="app_widget_description">This is an app widget description</string>
+</resources>

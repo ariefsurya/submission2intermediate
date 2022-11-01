@@ -1,0 +1,61 @@
+package com.example.submissionintermediate2.view.mapstorylist
+
+import android.app.Application
+import android.content.ContentValues
+import android.content.Context
+import android.util.Log
+import androidx.datastore.core.DataStore
+import androidx.datastore.preferences.core.Preferences
+import androidx.datastore.preferences.preferencesDataStore
+import androidx.lifecycle.*
+import com.example.submissionintermediate2.model.ErrorResponseModel
+import com.example.submissionintermediate2.model.StoryModel
+import com.example.submissionintermediate2.model.UserModel
+import com.example.submissionintermediate2.retrofit.ApiConfig
+import com.example.submissionintermediate2.retrofit.response.StoryApiResponse
+import com.example.submissionintermediate2.util.PreferenceManager
+import com.google.gson.Gson
+import kotlinx.coroutines.launch
+import retrofit2.Call
+import retrofit2.Callback
+import retrofit2.Response
+import java.lang.Exception
+
+private val Context.dataStore: DataStore<Preferences> by preferencesDataStore(name = "session")
+class MapStoryListViewModel(private val context: Context): ViewModel() {
+    private val mPreferenceManager: PreferenceManager = PreferenceManager.getInstance(context.dataStore)
+
+    private val _isLoading = MutableLiveData<Boolean>()
+    val isLoading: LiveData<Boolean> = _isLoading
+    private val _currSessionUser = MutableLiveData<UserModel>()
+    val currSessionUser: LiveData<UserModel> = _currSessionUser
+    private val _storyList = MutableLiveData<ArrayList<StoryModel>>()
+    val storyList: LiveData<ArrayList<StoryModel>> = _storyList
+
+    private val _errorMessage = MutableLiveData<String>()
+    val errorMessage: LiveData<String> = _errorMessage
+
+    fun getSessionUser(): LiveData<UserModel> {
+        return mPreferenceManager.getSessionUser().asLiveData()
+    }
+    fun setSessionUser (userModel: UserModel?){
+        viewModelScope.launch {
+            mPreferenceManager.setSessionUser(userModel)
+        }
+    }
+    fun setCurrentUser(currentUser: UserModel) {
+        _currSessionUser.value = currentUser
+    }
+
+    fun doApiGetStories () {
+        _isLoading.value = true
+        val responseBody = ApiConfig.getApiService().getStories("bearer " + currSessionUser.value?.token.toString(), 1, 10, 1)
+        if (!responseBody.error) {
+            _storyList.value = responseBody.listStory
+        }
+        else {
+            Log.e(ContentValues.TAG, "onError Message: ${responseBody.message}")
+            _errorMessage.value = responseBody.message
+        }
+    }
+}

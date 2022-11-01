@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Submission Intermediate 1</string>
+    <string name="register_desc">Buat Akun Cerita Anda</string>
+    <string name="register_here"><u>Daftar Disini !</u></string>
+    <string name="sign_in">Masuk</string>
+    <string name="sign_up">Daftar</string>
+    <string name="email">Email</string>
+    <string name="password">Kata Sandi</string>
+    <string name="user_name">Nama</string>
+    <string name="description">Deskripsi</string>
+    <string name="story">Cerita</string>
+    <string name="map_story">Peta Cerita</string>
+    <string name="story_detail">Detail Cerita</string>
+    <string name="add_new_story">Tambah Cerita Baru</string>
+    <string name="setting">Pengaturan</string>
+    <string name="logout">Keluar</string>
+    <string name="camera">Kamera</string>
+    <string name="gallery">Galeri</string>
+    <string name="upload">Unggah</string>
+    <string name="light_mode">Mode Terang</string>
+    <string name="dark_mode">Mode Gelap</string>
+    <string name="language_setting">setelan bahasa</string>
+    <string name="empty_text">tidak ada data</string>
+    <string name="retry">load ulang</string>
+    <string name="timeout">timeout</string>
+
+    <string name="register_success">Sukses Mendaftar</string>
+    <string name="story_not_found">Cerita Tidak ditemukan</string>
+    <!-- string error -->
+    <string name="error_name_not_valid">Mohon isi nama anda</string>
+    <string name="error_email_not_valid">Email tidak sesuai</string>
+    <string name="error_password_min_length">Panjang Kata Sandi minimal 6 Karakter</string>
+    <string name="error_descriptiom_not_valid">Mohon isi Deskripsi</string>
+    <string name="error_photo_not_valid">Mohon Upload Foto Cerita</string>
+
+    <string name="appwidget_text">EXAMPLE</string>
+    <string name="add_widget">Add widget</string>
+    <string name="app_widget_description">This is an app widget description</string>
+</resources>
